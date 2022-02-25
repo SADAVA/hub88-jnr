@@ -12,11 +12,6 @@ mix phx.gen.context 						\
 	--no-migration
 
 mix phx.gen.context 						\
-	Common Affiliate affiliates				\
-	name:string:unique						\
-	--no-migration
-
-mix phx.gen.context 						\
 	Common SubPartner subpartners			\
 	name:string:unique						\
 	--no-migration
@@ -48,7 +43,7 @@ mix phx.gen.context 						\
 	birth_date:datetime						\
 	registration_date:datetime				\
 	sex:references:sexes					\
-	affiliate_id:references:affiliates		\
+	affiliate_id:string						\
 	--no-migration
 
 
