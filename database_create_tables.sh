@@ -12,11 +12,6 @@ mix phx.gen.context 						\
 	--no-migration
 
 mix phx.gen.context 						\
-	Common SubPartner subpartners			\
-	name:string:unique						\
-	--no-migration
-
-mix phx.gen.context 						\
 	Common Sex sexes						\
 	name:string:unique						\
 	--no-migration
@@ -39,7 +34,7 @@ mix phx.gen.context 						\
 	name:string:unique						\
 	country:references:countries			\
 	jurisdiction:references:jurisdictions	\
-	sub_partner_id:references:subpartners	\
+	sub_partner_id:string					\
 	birth_date:datetime						\
 	registration_date:datetime				\
 	sex:references:sexes					\
