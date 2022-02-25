@@ -12,11 +12,6 @@ mix phx.gen.context 						\
 	--no-migration
 
 mix phx.gen.context 						\
-	Common Sex sexes						\
-	name:string:unique						\
-	--no-migration
-
-mix phx.gen.context 						\
 	Common Currency currencies				\
 	name:string:unique						\
 	--no-migration
@@ -37,7 +32,7 @@ mix phx.gen.context 						\
 	sub_partner_id:string					\
 	birth_date:datetime						\
 	registration_date:datetime				\
-	sex:references:sexes					\
+	sex:string								\
 	affiliate_id:string						\
 	--no-migration
 
