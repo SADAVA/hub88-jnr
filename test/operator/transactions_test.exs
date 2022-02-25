@@ -59,60 +59,6 @@ defmodule Operator.TransactionsTest do
     end
   end
 
-  describe "rounds" do
-    alias Operator.Transactions.Round
-
-    import Operator.TransactionsFixtures
-
-    @invalid_attrs %{name: nil}
-
-    test "list_rounds/0 returns all rounds" do
-      round = round_fixture()
-      assert Transactions.list_rounds() == [round]
-    end
-
-    test "get_round!/1 returns the round with given id" do
-      round = round_fixture()
-      assert Transactions.get_round!(round.id) == round
-    end
-
-    test "create_round/1 with valid data creates a round" do
-      valid_attrs = %{name: "some name"}
-
-      assert {:ok, %Round{} = round} = Transactions.create_round(valid_attrs)
-      assert round.name == "some name"
-    end
-
-    test "create_round/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = Transactions.create_round(@invalid_attrs)
-    end
-
-    test "update_round/2 with valid data updates the round" do
-      round = round_fixture()
-      update_attrs = %{name: "some updated name"}
-
-      assert {:ok, %Round{} = round} = Transactions.update_round(round, update_attrs)
-      assert round.name == "some updated name"
-    end
-
-    test "update_round/2 with invalid data returns error changeset" do
-      round = round_fixture()
-      assert {:error, %Ecto.Changeset{}} = Transactions.update_round(round, @invalid_attrs)
-      assert round == Transactions.get_round!(round.id)
-    end
-
-    test "delete_round/1 deletes the round" do
-      round = round_fixture()
-      assert {:ok, %Round{}} = Transactions.delete_round(round)
-      assert_raise Ecto.NoResultsError, fn -> Transactions.get_round!(round.id) end
-    end
-
-    test "change_round/1 returns a round changeset" do
-      round = round_fixture()
-      assert %Ecto.Changeset{} = Transactions.change_round(round)
-    end
-  end
-
   describe "bets" do
     alias Operator.Transactions.Bet
 

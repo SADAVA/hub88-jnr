@@ -25,25 +25,6 @@ defmodule Operator.TransactionsFixtures do
   end
 
   @doc """
-  Generate a unique round name.
-  """
-  def unique_round_name, do: "some name#{System.unique_integer([:positive])}"
-
-  @doc """
-  Generate a round.
-  """
-  def round_fixture(attrs \\ %{}) do
-    {:ok, round} =
-      attrs
-      |> Enum.into(%{
-        name: unique_round_name()
-      })
-      |> Operator.Transactions.create_round()
-
-    round
-  end
-
-  @doc """
   Generate a unique bet transaction_uuid.
   """
   def unique_bet_transaction_uuid, do: "some transaction_uuid#{System.unique_integer([:positive])}"

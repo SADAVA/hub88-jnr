@@ -43,63 +43,6 @@ defmodule Operator.CommonFixtures do
   end
 
   @doc """
-  Generate a unique affiliate name.
-  """
-  def unique_affiliate_name, do: "some name#{System.unique_integer([:positive])}"
-
-  @doc """
-  Generate a affiliate.
-  """
-  def affiliate_fixture(attrs \\ %{}) do
-    {:ok, affiliate} =
-      attrs
-      |> Enum.into(%{
-        name: unique_affiliate_name()
-      })
-      |> Operator.Common.create_affiliate()
-
-    affiliate
-  end
-
-  @doc """
-  Generate a unique sub_partner name.
-  """
-  def unique_sub_partner_name, do: "some name#{System.unique_integer([:positive])}"
-
-  @doc """
-  Generate a sub_partner.
-  """
-  def sub_partner_fixture(attrs \\ %{}) do
-    {:ok, sub_partner} =
-      attrs
-      |> Enum.into(%{
-        name: unique_sub_partner_name()
-      })
-      |> Operator.Common.create_sub_partner()
-
-    sub_partner
-  end
-
-  @doc """
-  Generate a unique sex name.
-  """
-  def unique_sex_name, do: "some name#{System.unique_integer([:positive])}"
-
-  @doc """
-  Generate a sex.
-  """
-  def sex_fixture(attrs \\ %{}) do
-    {:ok, sex} =
-      attrs
-      |> Enum.into(%{
-        name: unique_sex_name()
-      })
-      |> Operator.Common.create_sex()
-
-    sex
-  end
-
-  @doc """
   Generate a unique currency name.
   """
   def unique_currency_name, do: "some name#{System.unique_integer([:positive])}"
@@ -116,24 +59,5 @@ defmodule Operator.CommonFixtures do
       |> Operator.Common.create_currency()
 
     currency
-  end
-
-  @doc """
-  Generate a unique game name.
-  """
-  def unique_game_name, do: "some name#{System.unique_integer([:positive])}"
-
-  @doc """
-  Generate a game.
-  """
-  def game_fixture(attrs \\ %{}) do
-    {:ok, game} =
-      attrs
-      |> Enum.into(%{
-        name: unique_game_name()
-      })
-      |> Operator.Common.create_game()
-
-    game
   end
 end

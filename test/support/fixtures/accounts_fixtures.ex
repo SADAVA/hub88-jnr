@@ -16,9 +16,13 @@ defmodule Operator.AccountsFixtures do
     {:ok, user} =
       attrs
       |> Enum.into(%{
-        birth_date: ~N[2022-02-24 21:47:00],
+        affiliate_id: "some affiliate_id",
+        birth_date: ~N[2022-02-24 22:38:00],
         name: unique_user_name(),
-        registration_date: ~N[2022-02-24 21:47:00]
+        registration_date: ~N[2022-02-24 22:38:00],
+        sex: "some sex",
+        sub_partner_id: "some sub_partner_id",
+        tags: []
       })
       |> Operator.Accounts.create_user()
 

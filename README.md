@@ -55,12 +55,12 @@ bash database_create_tables.sh
 
 Populate common tables with data:
 ```bash
-bash database_load_common.sh
+mix run database_load_common.exs
 ```
 
 Load some test data into other tables:
 ```bash
-bash database_load_test_data.sh
+mix run database_load_test_data.exs
 ```
 
 ## Technical
