@@ -1,6 +1,29 @@
 # Hub88 Developer Challenge
 ## By Aleksander Tkatsenko
 
+## Setup
+### Install dependecies
+
+```bash
+mix deps.get
+```
+
+### Create and migrate databases
+
+```bash
+mix ecto.setup
+```
+
+### Run
+
+```bash
+mix phx.server
+```
+Or inside of `IEx`
+```bash
+iex -S mix phx.server
+```
+
 ## Technical
 
 Development machine:
@@ -41,3 +64,4 @@ Eshell V12.2.1
 `2022-02-25 21:52` - updated my machine and installed Elixir  
 `2022-02-25 21:18` - reading about Elixir and it's frameworks  
 `2022-02-25 21:16` - starting the project  
+`2022-02-25 22:33` - initialized Phoenix project  
