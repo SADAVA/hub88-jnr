@@ -32,6 +32,7 @@ mix phx.gen.context 						\
 	sub_partner_id:string					\
 	birth_date:datetime						\
 	registration_date:datetime				\
+	tags:array:string						\
 	sex:string								\
 	affiliate_id:string						\
 	--no-migration
