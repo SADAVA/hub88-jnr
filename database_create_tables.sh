@@ -16,13 +16,6 @@ mix phx.gen.context 						\
 	name:string:unique						\
 	--no-migration
 
-mix phx.gen.context 						\
-	Common Game games						\
-	name:string:unique						\
-	--no-migration
-
-
-
 # Accounts
 mix phx.gen.context 						\
 	Accounts User users 					\
