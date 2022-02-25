@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :operator, Operator.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "operator",
+  password: "operatorPASS",
   hostname: "localhost",
   database: "operator_dev",
   show_sensitive_data_on_connection_error: true,

@@ -24,6 +24,36 @@ Or inside of `IEx`
 iex -S mix phx.server
 ```
 
+## Database installation
+
+```bash
+>>> postgres --version
+postgres (PostgreSQL) 13.6
+```
+
+Install postgres
+```bash
+sudo pacman -S postgresql
+```
+
+Configure postgres
+```bash
+sudo -u postgres initdb -D /var/lib/postgres/data
+```
+
+### Development database
+
+Create a user for this project, using password: `operatorPASS`
+```bash
+sudo -u postgres createuser -P -e operator
+```
+
+And a database for that user
+```bash
+sudo -u postgres createdb -O operator -e operator_dev
+```
+
+
 ## Technical
 
 Development machine:
@@ -65,3 +95,4 @@ Eshell V12.2.1
 `2022-02-25 21:18` - reading about Elixir and it's frameworks  
 `2022-02-25 21:16` - starting the project  
 `2022-02-25 22:33` - initialized Phoenix project  
+`2022-02-25 22:42` - installed postgres and configured the project  
