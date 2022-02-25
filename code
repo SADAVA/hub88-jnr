@@ -1,0 +1,16 @@
+#!/bin/sh
+
+cd $(dirname $0)
+
+TARGET="."
+DATA_DIR="./VSCodeData"
+EXTS_DIR="./VSCodeData/Extensions"
+
+mkdir -p "$DATA_DIR"
+mkdir -p "$EXTS_DIR"
+
+code									\
+	--user-data-dir  "$DATA_DIR"		\
+	--extensions-dir "$EXTS_DIR"		\
+	--new-window						\
+	"$TARGET"
