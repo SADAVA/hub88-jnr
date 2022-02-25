@@ -74,3 +74,6 @@ mix phx.gen.context 						\
 	currency:references:currencies			\
 	amount:integer							\
 	--no-migration
+
+# Apply changes to database on disk
+mix ecto.migrate
