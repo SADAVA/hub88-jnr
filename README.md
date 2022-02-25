@@ -24,12 +24,7 @@ Or inside of `IEx`
 iex -S mix phx.server
 ```
 
-## Database installation
-
-```bash
->>> postgres --version
-postgres (PostgreSQL) 13.6
-```
+## Database
 
 Install postgres
 ```bash
@@ -53,6 +48,20 @@ And a database for that user
 sudo -u postgres createdb -O operator -e operator_dev
 ```
 
+Create tables:
+```bash
+bash database_create_tables.sh
+```
+
+Populate common tables with data:
+```bash
+bash database_load_common.sh
+```
+
+Load some test data into other tables:
+```bash
+bash database_load_test_data.sh
+```
 
 ## Technical
 
@@ -87,10 +96,13 @@ Erlang/OTP 24 [erts-12.2.1] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threa
 Elixir 1.13.0 (compiled with Erlang/OTP 24)
 Mix 1.13.0 (compiled with Erlang/OTP 24)
 Eshell V12.2.1
+
+postgres (PostgreSQL) 13.6
 ```
 
 ## Timeline
 
+`2022-02-25 23:23` - initial database sketch
 `2022-02-25 21:52` - updated my machine and installed Elixir  
 `2022-02-25 21:18` - reading about Elixir and it's frameworks  
 `2022-02-25 21:16` - starting the project  
