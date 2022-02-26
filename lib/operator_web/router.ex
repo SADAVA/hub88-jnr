@@ -20,10 +20,12 @@ defmodule OperatorWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", OperatorWeb do
-  #   pipe_through :api
-  # end
+  scope "/user", OperatorWeb do
+    pipe_through :api
+
+	post "/info", UserController, :info
+	post "/balance", UserController, :balance
+  end
 
   # Enables LiveDashboard only for development
   #
