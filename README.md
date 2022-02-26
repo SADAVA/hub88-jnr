@@ -1,3 +1,4 @@
+# STATUS: project abandoned
 # Hub88 Developer Challenge
 ## By Aleksander Tkatsenko
 
@@ -102,6 +103,7 @@ postgres (PostgreSQL) 13.6
 
 ## Timeline
 
+`2022-02-26 23:16` - project abandoned
 `2022-02-26 21:58` - continuing
 `2022-02-25 02:41` - could not get my head around `Ecto`, off to bed, continue tomorrow  
 `2022-02-25 23:23` - initial database sketch
