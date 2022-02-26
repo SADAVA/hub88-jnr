@@ -3,18 +3,17 @@
 # Common tables
 mix phx.gen.context 						\
 	Common Country countries 				\
-	name:string:unique						\
-	--no-migration
+	name:string:unique
 
 mix phx.gen.context 						\
 	Common Jurisdiction jurisdictions		\
-	name:string:unique						\
-	--no-migration
+	name:string:unique
 
 mix phx.gen.context 						\
 	Common Currency currencies				\
-	name:string:unique						\
-	--no-migration
+	name:string:unique
+
+
 
 # Accounts
 mix phx.gen.context 						\
@@ -27,8 +26,7 @@ mix phx.gen.context 						\
 	registration_date:datetime				\
 	tags:array:string						\
 	sex:string								\
-	affiliate_id:string						\
-	--no-migration
+	affiliate_id:string
 
 
 
@@ -38,21 +36,18 @@ mix phx.gen.context 						\
 	Transactions Wallet wallets				\
 	name:string:unique						\
 	currency:references:currencies			\
-	balance:integer							\
-	--no-migration
+	balance:integer
 
 mix phx.gen.context 						\
 	Transactions Round rounds				\
-	name:string:unique						\
-	--no-migration
+	name:string:unique
 
 mix phx.gen.context 						\
 	Transactions Bet bets					\
 	transaction_uuid:string:unique			\
 	round:references:rounds					\
 	currency:references:currencies			\
-	amount:integer							\
-	--no-migration
+	amount:integer
 
 # Apply changes to database on disk
 mix ecto.migrate
