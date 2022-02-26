@@ -102,6 +102,7 @@ postgres (PostgreSQL) 13.6
 
 ## Timeline
 
+`2022-02-25 02:41` - could not get my head around `Ecto`, off to bed, continue tomorrow  
 `2022-02-25 23:23` - initial database sketch
 `2022-02-25 21:52` - updated my machine and installed Elixir  
 `2022-02-25 21:18` - reading about Elixir and it's frameworks  
